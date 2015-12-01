@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  LienHeViewController.h
 //  BupTrenCanh
 //
 //  Created by mac on 9/20/15.
 //  Copyright © 2015 Viet Anh Dang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface LienHeViewController : ViewController
 
 @end
-
