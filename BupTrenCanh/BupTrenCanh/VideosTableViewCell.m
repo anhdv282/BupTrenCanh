@@ -20,4 +20,7 @@
     // Configure the view for the selected state
 }
 
+- (void)setCell:(NSString*) title withID:(NSString*)idVideo {
+    [self.cellVideos loadWithVideoId:idVideo];
+}
 @end

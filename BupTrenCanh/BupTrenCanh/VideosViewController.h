@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "YTPlayerView.h"
-@interface VideosViewController : ViewController
+#import "VideosTableViewCell.h"
+#import "youtube-player-ios-example/YouTubeiOSPlayerHelper.h"
+@interface VideosViewController : ViewController<UITableViewDataSource,UITableViewDelegate> {
+    NSArray *dataArray;
+}
 
 @end

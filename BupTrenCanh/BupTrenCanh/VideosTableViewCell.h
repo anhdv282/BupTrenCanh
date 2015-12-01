@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YTPlayerView.h"
 @interface VideosTableViewCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet YTPlayerView *cellVideos;
+- (void)setCell:(NSString*) title withID:(NSString*)idVideo;
 @end

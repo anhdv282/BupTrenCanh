@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    dataArray = [[NSArray alloc] init];
+    self.myTable.delegate = self;
+    self.myTable.dataSource = self;
     [self initDataUseAFNetworking];
 }
 
@@ -46,21 +49,13 @@
             // NSString *errorCode=[NSMutableString stringWithFormat:@"%@",[jsonObject objectForKey:@"response"]];
             
             
-            if(![[jsonObject objectForKey:@"#data"] isEqual:@""]){
-                
-                NSMutableArray *array=[jsonObject objectForKey:@"#data"];
-                // NSLog(@"array: %@",array);
-                NSLog(@"array: %d",array.count);
-                
-                int k = 0;
-                for(int z = 0; z<array.count;z++){
-                    
-                    NSString *strfd = [NSString stringWithFormat:@"%d",k];
-                    NSDictionary *dicr = jsonObject[@"#data"][strfd];
-                    k=k+1;
-                    
-                }
-                
+            if(![[jsonObject objectForKey:@"items"] isEqual:@""]){
+                NSMutableArray *array=[jsonObject objectForKey:@"items"];
+                dataArray = array;
+                [self.myTable reloadData];
+                NSDictionary *snippet = [dataArray[1] objectForKey:@"snippet"];
+                NSString *description = [snippet objectForKey:@"description"];
+                NSLog(@"%@",description);
             }
             
         }
@@ -81,7 +76,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -91,7 +86,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    VideosTableViewCell *cell = [self.myTable dequeueReusableCellWithIdentifier:@"VideosTableViewCell"];
+    if (!cell) {
+        cell =[[[NSBundle mainBundle] loadNibNamed:@"VideosTableViewCell" owner:self options:nil] objectAtIndex:0];
+    }
+    NSDictionary *snippet = [dataArray[indexPath.row] objectForKey:@"snippet"];
+    NSString *description = [snippet objectForKey:@"description"];
+    NSDictionary *resourceId = [snippet objectForKey:@"resourceId"];
+    NSString *videoId = [resourceId objectForKey:@"videoId"];
+    [cell setCell:description withID:videoId];
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

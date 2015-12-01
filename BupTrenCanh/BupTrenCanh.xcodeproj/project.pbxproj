@@ -63,6 +63,7 @@
 		04BD29661C0D9B1600491B0A /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD29611C0D9B1600491B0A /* Util.m */; };
 		04BD29671C0D9B1600491B0A /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD29641C0D9B1600491B0A /* Data.m */; };
 		04BD296A1C0D9C6600491B0A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD29691C0D9C6600491B0A /* RootViewController.m */; };
+		04BD296C1C0DB3CB00491B0A /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04BD296B1C0DB3CB00491B0A /* Assets.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +166,8 @@
 		04BD29641C0D9B1600491B0A /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
 		04BD29681C0D9C6600491B0A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		04BD29691C0D9C6600491B0A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		04BD296B1C0DB3CB00491B0A /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
+		04BD296D1C0DB3D200491B0A /* YouTubeiOSPlayerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeiOSPlayerHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,8 +311,10 @@
 		04BD29081C0D979800491B0A /* youtube-player-ios-example */ = {
 			isa = PBXGroup;
 			children = (
+				04BD296B1C0DB3CB00491B0A /* Assets.bundle */,
 				04BD29091C0D979800491B0A /* YTPlayerView.h */,
 				04BD290A1C0D979800491B0A /* YTPlayerView.m */,
+				04BD296D1C0DB3D200491B0A /* YouTubeiOSPlayerHelper.h */,
 			);
 			path = "youtube-player-ios-example";
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 				04BD294E1C0D9AED00491B0A /* ChildrenRight.plist in Resources */,
 				04BD29431C0D9ADC00491B0A /* NHCHVTHVQTET1.pdf in Resources */,
 				04BD29371C0D9AD100491B0A /* QuestionPopOverViewController.xib in Resources */,
+				04BD296C1C0DB3CB00491B0A /* Assets.bundle in Resources */,
 				04BD29191C0D98D400491B0A /* Assets.xcassets in Resources */,
 				04BD29181C0D98D400491B0A /* Main.storyboard in Resources */,
 				04BD292F1C0D9AC700491B0A /* QuizPopOverViewController.xib in Resources */,
