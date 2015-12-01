@@ -10,9 +10,6 @@
 		04BD28B01C0D956500491B0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28AF1C0D956500491B0A /* main.m */; };
 		04BD28B31C0D956500491B0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28B21C0D956500491B0A /* AppDelegate.m */; };
 		04BD28B61C0D956500491B0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28B51C0D956500491B0A /* ViewController.m */; };
-		04BD28B91C0D956500491B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD28B71C0D956500491B0A /* Main.storyboard */; };
-		04BD28BB1C0D956500491B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD28BA1C0D956500491B0A /* Assets.xcassets */; };
-		04BD28BE1C0D956500491B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD28BC1C0D956500491B0A /* LaunchScreen.storyboard */; };
 		04BD28CD1C0D96FE00491B0A /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28C81C0D96FE00491B0A /* RECommonFunctions.m */; };
 		04BD28CE1C0D96FE00491B0A /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28CA1C0D96FE00491B0A /* RESideMenu.m */; };
 		04BD28CF1C0D96FE00491B0A /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28CC1C0D96FE00491B0A /* UIViewController+RESideMenu.m */; };
@@ -34,6 +31,9 @@
 		04BD29061C0D972400491B0A /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28FD1C0D972400491B0A /* UIRefreshControl+AFNetworking.m */; };
 		04BD29071C0D972400491B0A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD28FF1C0D972400491B0A /* UIWebView+AFNetworking.m */; };
 		04BD290B1C0D979800491B0A /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD290A1C0D979800491B0A /* YTPlayerView.m */; };
+		04BD29181C0D98D400491B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD29151C0D98D400491B0A /* Main.storyboard */; };
+		04BD29191C0D98D400491B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD29161C0D98D400491B0A /* Assets.xcassets */; };
+		04BD291A1C0D98D400491B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BD29171C0D98D400491B0A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,9 +43,6 @@
 		04BD28B21C0D956500491B0A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04BD28B41C0D956500491B0A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04BD28B51C0D956500491B0A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04BD28B81C0D956500491B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04BD28BA1C0D956500491B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04BD28BD1C0D956500491B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BD28BF1C0D956500491B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BD28C71C0D96FE00491B0A /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		04BD28C81C0D96FE00491B0A /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
@@ -92,6 +89,9 @@
 		04BD28FF1C0D972400491B0A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		04BD29091C0D979800491B0A /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		04BD290A1C0D979800491B0A /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		04BD29151C0D98D400491B0A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04BD29161C0D98D400491B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04BD29171C0D98D400491B0A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,15 +124,24 @@
 		04BD28AD1C0D956500491B0A /* BupTrenCanh */ = {
 			isa = PBXGroup;
 			children = (
+				04BD29141C0D987D00491B0A /* Util */,
+				04BD29131C0D987500491B0A /* Videos */,
+				04BD29121C0D986A00491B0A /* Images */,
+				04BD29111C0D986000491B0A /* Model */,
+				04BD29101C0D985A00491B0A /* PDF */,
+				04BD290F1C0D985200491B0A /* TinhHuong */,
+				04BD290E1C0D984B00491B0A /* TracNghiem */,
+				04BD290D1C0D984300491B0A /* LienHe */,
+				04BD290C1C0D983900491B0A /* Left Menu */,
 				04BD28C51C0D96ED00491B0A /* Framework */,
 				04BD28B11C0D956500491B0A /* AppDelegate.h */,
 				04BD28B21C0D956500491B0A /* AppDelegate.m */,
 				04BD28B41C0D956500491B0A /* ViewController.h */,
 				04BD28B51C0D956500491B0A /* ViewController.m */,
-				04BD28B71C0D956500491B0A /* Main.storyboard */,
-				04BD28BA1C0D956500491B0A /* Assets.xcassets */,
-				04BD28BC1C0D956500491B0A /* LaunchScreen.storyboard */,
 				04BD28BF1C0D956500491B0A /* Info.plist */,
+				04BD29151C0D98D400491B0A /* Main.storyboard */,
+				04BD29161C0D98D400491B0A /* Assets.xcassets */,
+				04BD29171C0D98D400491B0A /* LaunchScreen.storyboard */,
 				04BD28AE1C0D956500491B0A /* Supporting Files */,
 			);
 			path = BupTrenCanh;
@@ -230,6 +239,69 @@
 			path = "youtube-player-ios-example";
 			sourceTree = "<group>";
 		};
+		04BD290C1C0D983900491B0A /* Left Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Left Menu";
+			sourceTree = "<group>";
+		};
+		04BD290D1C0D984300491B0A /* LienHe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LienHe;
+			sourceTree = "<group>";
+		};
+		04BD290E1C0D984B00491B0A /* TracNghiem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TracNghiem;
+			sourceTree = "<group>";
+		};
+		04BD290F1C0D985200491B0A /* TinhHuong */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TinhHuong;
+			sourceTree = "<group>";
+		};
+		04BD29101C0D985A00491B0A /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PDF;
+			sourceTree = "<group>";
+		};
+		04BD29111C0D986000491B0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		04BD29121C0D986A00491B0A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		04BD29131C0D987500491B0A /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		04BD29141C0D987D00491B0A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,9 +359,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BD28BE1C0D956500491B0A /* LaunchScreen.storyboard in Resources */,
-				04BD28BB1C0D956500491B0A /* Assets.xcassets in Resources */,
-				04BD28B91C0D956500491B0A /* Main.storyboard in Resources */,
+				04BD291A1C0D98D400491B0A /* LaunchScreen.storyboard in Resources */,
+				04BD29191C0D98D400491B0A /* Assets.xcassets in Resources */,
+				04BD29181C0D98D400491B0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,25 +400,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		04BD28B71C0D956500491B0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04BD28B81C0D956500491B0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04BD28BC1C0D956500491B0A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04BD28BD1C0D956500491B0A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04BD28C01C0D956500491B0A /* Debug */ = {
