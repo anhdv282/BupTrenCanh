@@ -47,7 +47,6 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
     NSLog(@"%@", request);
     [self.myWebView loadRequest:request];
-
 }
 /*
 #pragma mark - Navigation

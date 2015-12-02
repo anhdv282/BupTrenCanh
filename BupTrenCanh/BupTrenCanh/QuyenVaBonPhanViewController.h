@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WebViewPDFViewController.h"
 
 @interface QuyenVaBonPhanViewController : ViewController
 @property (weak, nonatomic) IBOutlet UITableView *qvbpTableView;

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "WebViewPDFViewController.h"
 @interface TaiLieuThamKhaoViewController : ViewController
 @property (weak, nonatomic) IBOutlet UITableView *tltkTableView;
 

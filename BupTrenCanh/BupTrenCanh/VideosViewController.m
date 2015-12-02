@@ -7,7 +7,7 @@
 //
 
 #import "VideosViewController.h"
-
+#import "Util.h"
 @interface VideosViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
 
@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[self navigationController] navigationBar].barTintColor = [UIColor colorWithRed: 41.0/255.0 green:181.0/255.0 blue:46.0/255.0 alpha:1.0];
+    [[self navigationController] navigationBar].tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     dataArray = [[NSArray alloc] init];
     self.myTable.delegate = self;
     self.myTable.dataSource = self;
@@ -57,7 +60,6 @@
                 NSString *description = [snippet objectForKey:@"description"];
                 NSLog(@"%@",description);
             }
-            
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%s: AFHTTPRequestOperation error: %@", __FUNCTION__, error);
@@ -81,7 +83,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 75;
+    return SCREEN_HEIGHT_PORTRAIT/3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

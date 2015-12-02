@@ -9,7 +9,9 @@
 #import "QuyenVaBonPhanViewController.h"
 #import "PDFViewController.h"
 
-@interface QuyenVaBonPhanViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface QuyenVaBonPhanViewController ()<UITableViewDataSource, UITableViewDelegate> {
+    WebViewPDFViewController *webView;
+}
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property NSArray *data;
 @end
@@ -19,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[self navigationController] navigationBar].barTintColor = [UIColor colorWithRed: 41.0/255.0 green:181.0/255.0 blue:46.0/255.0 alpha:1.0];
+    [[self navigationController] navigationBar].tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     self.data = [NSArray arrayWithObjects:@"CongUocLHQVeQuyenTreEm1989",@"LuatBVCSGDTE",nil];
@@ -70,7 +75,7 @@
             break;
     }
     label.text = text;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
 }
 
@@ -79,6 +84,9 @@
 //    PDFViewController* viewController = [[PDFViewController alloc] init];
 //    
 //    [self.navigationController pushViewController:viewController animated:YES];
+    webView = [[WebViewPDFViewController alloc] initWithNibName:@"WebViewPDFViewController" bundle:nil];
+    webView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [webView showInView:YES aView:self.view reason:[self.data objectAtIndex:indexPath.row]];
 }
 
 - (void) didChooseAtIndex:(NSInteger)index{

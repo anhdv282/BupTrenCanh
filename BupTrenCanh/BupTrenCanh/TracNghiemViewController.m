@@ -50,6 +50,7 @@
 
     [[self navigationController] navigationBar].barTintColor = [UIColor colorWithRed: 41.0/255.0 green:181.0/255.0 blue:46.0/255.0 alpha:1.0];
     [[self navigationController] navigationBar].tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     [self initData];
     [self setBorderOfView:self.viewButton1];
     [self setBorderOfView:self.viewButton2];

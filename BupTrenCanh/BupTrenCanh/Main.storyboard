@@ -374,32 +374,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="videosCell" rowHeight="250" id="6Kg-Ny-9Ko" customClass="VideosTableViewCell" customModule="BupTrenCanh" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="375" height="250"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Kg-Ny-9Ko" id="3qA-Gz-kAq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijo-fn-2pv" customClass="YTPlayerView">
-                                                    <rect key="frame" x="5" y="5" width="365" height="239.5"/>
-                                                    <animations/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </subviews>
-                                            <animations/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="ijo-fn-2pv" firstAttribute="top" secondItem="3qA-Gz-kAq" secondAttribute="top" constant="5" id="0D3-sY-Rn6"/>
-                                                <constraint firstAttribute="trailing" secondItem="ijo-fn-2pv" secondAttribute="trailing" constant="5" id="Ifb-ri-6Dr"/>
-                                                <constraint firstItem="ijo-fn-2pv" firstAttribute="leading" secondItem="3qA-Gz-kAq" secondAttribute="leading" constant="5" id="VFp-pB-0Tg"/>
-                                                <constraint firstAttribute="bottom" secondItem="ijo-fn-2pv" secondAttribute="bottom" constant="5" id="xXM-XI-BVc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="EyY-cc-58L" id="DJC-wR-gkj"/>
                                     <outlet property="delegate" destination="EyY-cc-58L" id="dbb-7T-NI0"/>
@@ -750,7 +724,7 @@ PVHung</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUy-x4-70u">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -761,7 +735,7 @@ PVHung</string>
                             <constraint firstItem="xUy-x4-70u" firstAttribute="leading" secondItem="JXD-1e-Laj" secondAttribute="leading" id="5w8-5R-NSw"/>
                             <constraint firstAttribute="trailing" secondItem="xUy-x4-70u" secondAttribute="trailing" id="gQq-s4-T2H"/>
                             <constraint firstItem="uBW-2D-gvH" firstAttribute="top" secondItem="xUy-x4-70u" secondAttribute="bottom" id="kUI-87-zrC"/>
-                            <constraint firstItem="xUy-x4-70u" firstAttribute="top" secondItem="lU2-km-UnQ" secondAttribute="bottom" id="p28-T9-jWM"/>
+                            <constraint firstItem="xUy-x4-70u" firstAttribute="top" secondItem="lU2-km-UnQ" secondAttribute="bottom" constant="70" id="p28-T9-jWM"/>
                         </constraints>
                     </view>
                     <connections>

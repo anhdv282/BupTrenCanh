@@ -8,7 +8,9 @@
 
 #import "TaiLieuThamKhaoViewController.h"
 #import "PDFViewController.h"
-@interface TaiLieuThamKhaoViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface TaiLieuThamKhaoViewController ()<UITableViewDataSource, UITableViewDelegate> {
+    WebViewPDFViewController *webView;
+}
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property NSArray *data;
 @end
@@ -18,9 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[self navigationController] navigationBar].barTintColor = [UIColor colorWithRed: 41.0/255.0 green:181.0/255.0 blue:46.0/255.0 alpha:1.0];
+    [[self navigationController] navigationBar].tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
-    self.data = [NSArray arrayWithObjects:@"CongUocLHQVeQuyenTreEm1989",@"LuatBVCSGDTE",nil];
+    self.data = [NSArray arrayWithObjects:@"NHCHVTHVQTET1",@"NHCHVTHVQTET2",nil];
     NSLog(@"%@",self.data);
 }
 
@@ -39,7 +44,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 75;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,21 +54,25 @@
     NSString *text;
     switch (indexPath.row) {
         case 0:
-            text = @"Công ước Liên Hợp Quốc về quyền trẻ em";
+            text = @"Ngân hàng câu hỏi và tình huống về quyền trẻ em 1";
             break;
         case 1:
-            text = @"Luật chăm sóc giáo dục và bảo vệ trẻ em";
+            text = @"Ngân hàng câu hỏi và tình huống về quyền trẻ em 2";
             break;
         default:
             break;
     }
     label.text = text;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self didChooseAtIndex:indexPath.row];
+    //    [self didChooseAtIndex:indexPath.row];
+    webView = [[WebViewPDFViewController alloc] initWithNibName:@"WebViewPDFViewController" bundle:nil];
+    webView.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    [webView showInView:YES aView:self.view reason:[self.data objectAtIndex:indexPath.row]];
+    
 }
 
 - (void) didChooseAtIndex:(NSInteger)index{

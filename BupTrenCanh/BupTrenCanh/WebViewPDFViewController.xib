@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewPDFViewController">
+            <connections>
+                <outlet property="btnClose" destination="Ome-xY-JbA" id="sGK-ge-Nti"/>
+                <outlet property="myWebView" destination="FQi-4l-gq8" id="CH2-C6-rgE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQi-4l-gq8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-xY-JbA">
+                    <rect key="frame" x="321" y="80" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="4xq-7G-oqJ"/>
+                        <constraint firstAttribute="height" constant="30" id="7ao-X8-i1C"/>
+                    </constraints>
+                    <state key="normal" title="Back"/>
+                    <connections>
+                        <action selector="btnCloseTapped:" destination="-1" eventType="touchUpInside" id="CKs-gE-Tnq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FQi-4l-gq8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FrX-gx-nXf"/>
+                <constraint firstItem="FQi-4l-gq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bEh-3p-bjq"/>
+                <constraint firstAttribute="trailing" secondItem="FQi-4l-gq8" secondAttribute="trailing" id="dV3-ex-RjK"/>
+                <constraint firstAttribute="trailing" secondItem="Ome-xY-JbA" secondAttribute="trailing" constant="8" id="nGO-dg-wBx"/>
+                <constraint firstAttribute="bottom" secondItem="FQi-4l-gq8" secondAttribute="bottom" id="pjE-kV-kjf"/>
+                <constraint firstItem="Ome-xY-JbA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="xCV-ez-heg"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="261.5" y="352.5"/>
+        </view>
+    </objects>
+</document>
