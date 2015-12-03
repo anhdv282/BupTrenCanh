@@ -45,20 +45,13 @@
         NSArray *jsonDataArray = [[NSArray alloc]init];
         jsonDataArray = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&jsonError];
         
-        NSLog(@"jsonDataArray: %@",jsonDataArray);
-        
         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
         if(jsonObject !=nil){
             // NSString *errorCode=[NSMutableString stringWithFormat:@"%@",[jsonObject objectForKey:@"response"]];
-            
-            
             if(![[jsonObject objectForKey:@"items"] isEqual:@""]){
                 NSMutableArray *array=[jsonObject objectForKey:@"items"];
                 dataArray = array;
                 [self.myTable reloadData];
-                NSDictionary *snippet = [dataArray[1] objectForKey:@"snippet"];
-                NSString *description = [snippet objectForKey:@"description"];
-                NSLog(@"%@",description);
             }
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

@@ -97,7 +97,7 @@
 - (void) randomQuestion {
     bound = (int)arrayData.count - countPlay;
     if (bound < 1) {
-        // Win
+        [self isWin];
     } else {
         randomIndex = (int)arc4random() % bound;
         if (randomIndex >=0 && randomIndex <= arrayData.count) {
@@ -210,6 +210,30 @@
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
     
+}
+
+- (void) isWin {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Thắng" message:@"Bạn có muốn chơi lại ?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        self.imgLife1.image = [UIImage imageNamed:@"heart_icon_red"];
+        self.imgLife2.image = [UIImage imageNamed:@"heart_icon_red"];
+        self.imgLife3.image = [UIImage imageNamed:@"heart_icon_red"];
+        countError = 3;
+        countPlay = 0;
+        self.lblMark.text = @"0";
+        [self nextQuestion];
+    }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark Action View

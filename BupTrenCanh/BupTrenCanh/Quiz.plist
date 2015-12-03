@@ -112,19 +112,9 @@
 		<string>71. Công ước về QTE quy định trẻ em ở bậc học nào được miễn phí khi đi học?</string>
 		<string>Điểm a, Khoản 1, Điều 28 Công ước về QTE quy định: “Thực hiện chính sách giáo dục tiểu học bắt buộc, sẵn có và miễn phí cho tất cả mọi người”.</string>
 	</array>
-	<key>Question 70</key>
-	<array>
-		<string>3</string>
-		<string>Phát triển nhân cách, tài năng và khả năng về trí tuệ</string>
-		<string>Phát triển tối đa nhân cách, tài năng và khả năng về thể chất</string>
-		<string>Phát triển tối đa nhân cách, tài năng, các khả năng về trí tuệ và thể chất</string>
-		<string>Phát triển các tài năng, khả năng về trí tuệ và thể chất</string>
-		<string>70. Việc giáo dục trẻ em phải hướng tới mục tiêu nào?</string>
-		<string>Theo quy định tại Điểm a, Khoản 1, Điều 29 Công ước về QTE, một trong những mục tiêu mà việc giáo dục trẻ em phải hướng tới là phát triển tối đa nhân cách, tài năng, các khả năng về trí tuệ và thể chất của trẻ em.</string>
-	</array>
 	<key>Question 66</key>
 	<array>
-		<string></string>
+		<string>3</string>
 		<string></string>
 		<string>Đúng</string>
 		<string>Sai</string>
@@ -311,26 +301,6 @@
 - Nhóm quyền được tham gia
 </string>
 	</array>
-	<key>Question 29</key>
-	<array>
-		<string>4</string>
-		<string>Quyền được học tập</string>
-		<string>Quyền được tự do kết bạn</string>
-		<string>Quyền tham gia vào các câu lạc bộ</string>
-		<string>Quyền được khai sinh, có họ tên và quốc tịch</string>
-		<string>29. Quyền nào sau đây thuộc nhóm quyền được sống còn?</string>
-		<string>Khoản 1, Điều 7 Công ước về QTE quy định: “Trẻ em phải được đăng ký ngay lập tức sau sinh ra và phải có quyền có họ tên, quyền có quốc tịch và trong chừng mực có thể, quyền biết cha, mẹ của mình và được cha mẹ mình chăm sóc sau khi ra đời”.</string>
-	</array>
-	<key>Question 30</key>
-	<array>
-		<string>4</string>
-		<string>Quyền được bày tỏ ý kiến</string>
-		<string>Quyền tham gia các hoạt động văn hóa</string>
-		<string>Quyền được vui chơi giải trí</string>
-		<string>Quyền được khai sinh, có họ tên và quốc tịch</string>
-		<string>30. Trẻ em mới sinh ra phải được đảm bảo những quyền gì?</string>
-		<string>Khoản 1, Điều 7 Công ước về QTE quy định: “Trẻ em phải được đăng ký ngay lập tức sau khi sinh ra và có quyền có họ tên, có quốc tịch và trong chừng mực có thể, quyền biết cha mẹ của mình và được cha mẹ mình chăm sóc sau khi ra đời”.</string>
-	</array>
 	<key>Question 32</key>
 	<array>
 		<string>2</string>
@@ -352,16 +322,6 @@
 		<string></string>
 		<string>34. Mọi trẻ em sinh ra được Nhà nước bảo đảm quyền được hưởng an sinh xã hội. Đúng hay sai?</string>
 		<string>Khoản 1, Điều 26 Công ước về QTE quy định: “Các quốc gia thành viên công nhận là tất cả trẻ em đều được quyền hưởng an sinh xã hội, bao gồm cả bảo hiểm xã hội, và phải thi hành những biện pháp cần thiết để thực hiện đầy đủ quyền đó phù hợp với pháp luật quốc gia của mình”.</string>
-	</array>
-	<key>Question 37</key>
-	<array>
-		<string>4</string>
-		<string>Quyền được chăm sóc và nuôi dưỡng</string>
-		<string>Quyền được giữ gìn bản sắc dân tộc</string>
-		<string>Quyền được bày tỏ ý kiến</string>
-		<string>Quyền không bị xâm phạm thân thể, đánh đập</string>
-		<string>37. Quyền nào sau đây thuộc nhóm quyền được bảo vệ ?</string>
-		<string>Khoản 1, Điều 1 Công ước về QTE quy định: “Các quốc gia thành viên phải thực hiện mọi biện pháp lập pháp, hành chính, xã hội và giáo dục thích hợp để bảo vệ trẻ em khỏi mọi hình thức bạo lực về thể xác hoặc tinh thần”.</string>
 	</array>
 	<key>Question 40</key>
 	<array>

@@ -463,6 +463,7 @@
 				TargetAttributes = {
 					04BD28AA1C0D956500491B0A = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = L6T2HL6MP7;
 					};
 				};
 			};
@@ -648,10 +649,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = BupTrenCanh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.BupTrenCanh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa76cf1c-1fd8-4158-b97c-b93b6ddd8c75";
 			};
 			name = Debug;
 		};
@@ -659,10 +662,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = BupTrenCanh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.BupTrenCanh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fa76cf1c-1fd8-4158-b97c-b93b6ddd8c75";
 			};
 			name = Release;
 		};

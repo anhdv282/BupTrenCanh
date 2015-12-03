@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQi-4l-gq8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <animations/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                 </webView>
@@ -38,7 +38,7 @@
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="FQi-4l-gq8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FrX-gx-nXf"/>
+                <constraint firstItem="FQi-4l-gq8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="FrX-gx-nXf"/>
                 <constraint firstItem="FQi-4l-gq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bEh-3p-bjq"/>
                 <constraint firstAttribute="trailing" secondItem="FQi-4l-gq8" secondAttribute="trailing" id="dV3-ex-RjK"/>
                 <constraint firstAttribute="trailing" secondItem="Ome-xY-JbA" secondAttribute="trailing" constant="8" id="nGO-dg-wBx"/>

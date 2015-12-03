@@ -27,7 +27,6 @@
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     self.data = [NSArray arrayWithObjects:@"CongUocLHQVeQuyenTreEm1989",@"LuatBVCSGDTE",nil];
-    NSLog(@"%@",self.data);
 }
 
 - (void)didReceiveMemoryWarning {

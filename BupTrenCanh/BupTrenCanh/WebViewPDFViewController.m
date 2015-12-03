@@ -34,10 +34,8 @@
 
 - (void) loadPDF {
     NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"pdf"];
-    NSLog(@"%@", path);
     NSURL *targetURL = [NSURL fileURLWithPath:path];
     NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-    NSLog(@"%@", request);
     [self.myWebView loadRequest:request];
 }
 
