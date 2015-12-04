@@ -56,6 +56,7 @@
     [self setBorderOfView:self.viewButton2];
     [self setBorderOfView:self.viewButton3];
     [self setBorderOfView:self.viewButton4];
+    
     quizPopOver = [[QuizPopOverViewController alloc] init];
     quizPopOver.delegate = self;
     countPlay = 0;

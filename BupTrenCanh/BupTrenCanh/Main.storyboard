@@ -329,6 +329,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tải ngay ứng dụng &quot;Búp trên cành&quot; trên iOS để xem chi tiết lời giải" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lze-dP-SuZ">
+                                <rect key="frame" x="16" y="503" width="343" height="52"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="VNa-zc-jnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,9 +347,12 @@
                             <constraint firstItem="7bx-3B-25L" firstAttribute="top" secondItem="SLR-tH-JGT" secondAttribute="bottom" constant="8" id="HNP-Zg-RlD"/>
                             <constraint firstAttribute="trailing" secondItem="MyY-la-yl6" secondAttribute="trailing" constant="16" id="JAI-MJ-yUL"/>
                             <constraint firstItem="MyY-la-yl6" firstAttribute="top" secondItem="7bx-3B-25L" secondAttribute="bottom" constant="8" id="KS9-jC-vVB"/>
+                            <constraint firstItem="MyY-la-yl6" firstAttribute="top" secondItem="Lze-dP-SuZ" secondAttribute="bottom" constant="42" id="Rwg-W1-xo9"/>
                             <constraint firstAttribute="trailing" secondItem="7bx-3B-25L" secondAttribute="trailing" constant="16" id="aAj-AS-JCG"/>
+                            <constraint firstAttribute="trailing" secondItem="Lze-dP-SuZ" secondAttribute="trailing" constant="16" id="c9i-pK-oxJ"/>
                             <constraint firstItem="ZL5-mR-cZU" firstAttribute="top" secondItem="MyY-la-yl6" secondAttribute="bottom" constant="30" id="cYh-RC-78h"/>
                             <constraint firstItem="MyY-la-yl6" firstAttribute="leading" secondItem="DpE-47-hxa" secondAttribute="leading" constant="16" id="d9j-u9-jI6"/>
+                            <constraint firstItem="Lze-dP-SuZ" firstAttribute="leading" secondItem="DpE-47-hxa" secondAttribute="leading" constant="16" id="mfz-P5-nZv"/>
                             <constraint firstItem="7bx-3B-25L" firstAttribute="leading" secondItem="DpE-47-hxa" secondAttribute="leading" constant="16" id="nQt-PE-fJw"/>
                         </constraints>
                     </view>
@@ -348,8 +362,14 @@
                                 <action selector="presentLeftMenuViewController:" destination="ccz-oB-jfL" id="FQu-Yq-Dug"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="facebook_icon_white_small" id="PnM-XV-k3n">
+                            <connections>
+                                <action selector="shareFacebook:" destination="ccz-oB-jfL" id="3eh-j6-hYP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ads" destination="Lze-dP-SuZ" id="1qY-nu-hRN"/>
                         <outlet property="lblQuestion" destination="7bx-3B-25L" id="aAv-cB-lYJ"/>
                         <outlet property="resultBtn" destination="MyY-la-yl6" id="jgJ-rc-zgn"/>
                     </connections>
@@ -775,6 +795,7 @@ PVHung</string>
     <resources>
         <image name="connect_icon" width="150" height="150"/>
         <image name="facebook" width="40" height="40"/>
+        <image name="facebook_icon_white_small" width="20" height="20"/>
         <image name="heart_icon_red" width="45" height="40"/>
         <image name="mail" width="56" height="40"/>
         <image name="menu_icon" width="22" height="13"/>

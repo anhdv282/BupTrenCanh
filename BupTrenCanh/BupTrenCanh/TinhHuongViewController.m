@@ -7,7 +7,7 @@
 //
 
 #import "TinhHuongViewController.h"
-
+#import <Social/Social.h>
 @interface TinhHuongViewController () {
     NSMutableArray *arrayData;
     NSMutableArray *currentData;
@@ -17,6 +17,7 @@
 }
 @property (weak, nonatomic) IBOutlet UITextView *lblQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *resultBtn;
+@property (weak, nonatomic) IBOutlet UILabel *ads;
 
 @end
 
@@ -28,6 +29,7 @@
     [[self navigationController] navigationBar].barTintColor = [UIColor colorWithRed: 41.0/255.0 green:181.0/255.0 blue:46.0/255.0 alpha:1.0];
     [[self navigationController] navigationBar].tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [self.ads setHidden:YES];
     [self initData];
     [self randomQuiz];
     self.resultBtn.layer.cornerRadius = 5.0;
@@ -79,6 +81,43 @@
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"nextQuestion" object:nil];
+}
+
+- (IBAction)shareFacebook:(UIBarButtonItem *)sender {
+    [self.ads setHidden:NO];
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *tweet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+//        [tweet setInitialText:@"Initial tweet text."];
+        [tweet addImage:image];
+        [tweet setCompletionHandler:^(SLComposeViewControllerResult result)
+         {
+             if (result == SLComposeViewControllerResultCancelled)
+             {
+                 NSLog(@"The user cancelled.");
+             }
+             else if (result == SLComposeViewControllerResultDone)
+             {
+                 NSLog(@"The user sent the post.");
+             }
+         }];
+        [self presentViewController:tweet animated:YES completion:nil];
+    }
+    else
+    {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Facebook"
+                                                        message:@"Facebook integration is not available.  Make sure you have setup your Facebook account on your device."
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        [alert show];
+    }
+    [self.ads setHidden:YES];
 }
 /*
 #pragma mark - Navigation

@@ -66,6 +66,10 @@
 		04BD29671C0D9B1600491B0A /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD29641C0D9B1600491B0A /* Data.m */; };
 		04BD296A1C0D9C6600491B0A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD29691C0D9C6600491B0A /* RootViewController.m */; };
 		04BD296C1C0DB3CB00491B0A /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04BD296B1C0DB3CB00491B0A /* Assets.bundle */; };
+		04C14FA21C103820003CB383 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C14FA11C103820003CB383 /* Social.framework */; };
+		04C14FA41C10382F003CB383 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C14FA31C10382F003CB383 /* CoreGraphics.framework */; };
+		04C14FA61C103840003CB383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C14FA51C103840003CB383 /* UIKit.framework */; };
+		04C14FA81C103847003CB383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C14FA71C103847003CB383 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +177,10 @@
 		04BD29691C0D9C6600491B0A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		04BD296B1C0DB3CB00491B0A /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		04BD296D1C0DB3D200491B0A /* YouTubeiOSPlayerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTubeiOSPlayerHelper.h; sourceTree = "<group>"; };
+		04C14FA11C103820003CB383 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		04C14FA31C10382F003CB383 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04C14FA51C103840003CB383 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04C14FA71C103847003CB383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +188,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C14FA81C103847003CB383 /* Foundation.framework in Frameworks */,
+				04C14FA61C103840003CB383 /* UIKit.framework in Frameworks */,
+				04C14FA41C10382F003CB383 /* CoreGraphics.framework in Frameworks */,
+				04C14FA21C103820003CB383 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +201,10 @@
 		04BD28A21C0D956500491B0A = {
 			isa = PBXGroup;
 			children = (
+				04C14FA71C103847003CB383 /* Foundation.framework */,
+				04C14FA51C103840003CB383 /* UIKit.framework */,
+				04C14FA31C10382F003CB383 /* CoreGraphics.framework */,
+				04C14FA11C103820003CB383 /* Social.framework */,
 				04BD28AD1C0D956500491B0A /* BupTrenCanh */,
 				04BD28AC1C0D956500491B0A /* Products */,
 			);
@@ -649,12 +665,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BupTrenCanh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.BupTrenCanh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fa76cf1c-1fd8-4158-b97c-b93b6ddd8c75";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -662,12 +679,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BupTrenCanh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.vclon.BupTrenCanh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fa76cf1c-1fd8-4158-b97c-b93b6ddd8c75";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
