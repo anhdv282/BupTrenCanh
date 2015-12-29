@@ -5,20 +5,21 @@
 //  Created by mac on 9/20/15.
 //  Copyright © 2015 Viet Anh Dang. All rights reserved.
 //
-
+@import GoogleMobileAds;
 #import "TinhHuongViewController.h"
 #import <Social/Social.h>
-@interface TinhHuongViewController () {
+@interface TinhHuongViewController ()<GADInterstitialDelegate> {
     NSMutableArray *arrayData;
     NSMutableArray *currentData;
     NSMutableArray *quiz;
+    NSTimer *timer;
     int randomIndex;
     QuestionPopOverViewController *quizPopOver;
 }
 @property (weak, nonatomic) IBOutlet UITextView *lblQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *resultBtn;
 @property (weak, nonatomic) IBOutlet UILabel *ads;
-
+@property(nonatomic, strong) GADInterstitial *interstitial;
 @end
 
 @implementation TinhHuongViewController
@@ -32,6 +33,7 @@
     [self.ads setHidden:YES];
     [self initData];
     [self randomQuiz];
+    [self createAndLoadInterstitial];
     self.resultBtn.layer.cornerRadius = 5.0;
 }
 
@@ -75,12 +77,14 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(randomQuiz) name:@"nextQuestion" object:nil];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(showAds) userInfo:nil repeats:YES];
     [self randomQuiz];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"nextQuestion" object:nil];
+    [timer invalidate];
 }
 
 - (IBAction)shareFacebook:(UIBarButtonItem *)sender {
@@ -118,6 +122,37 @@
         [alert show];
     }
     [self.ads setHidden:YES];
+}
+
+- (void)showAds {
+    if ([self.interstitial isReady]) {
+        [self.interstitial presentFromRootViewController:self];
+    }
+}
+
+- (void)createAndLoadInterstitial {
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-6761165209979255/3565510128"];
+    self.interstitial.delegate = self;
+    
+    GADRequest *request = [GADRequest request];
+    // Request test ads on devices you specify. Your test device ID is printed to the console when
+    // an ad request is made. GADInterstitial automatically returns test ads when running on a
+    // simulator.
+//    request.testDevices = @[
+//                            @"2077ef9a63d2b398840261c8221a0c9a"  // Eric's iPod Touch
+//                            ];
+//    request.testDevices = @[@"bbb31a285078a457dbfcb3484cce7ac662a4d9fc"];
+    [self.interstitial loadRequest:request];
+}
+
+- (void)interstitial:(GADInterstitial *)interstitial
+didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"interstitialDidFailToReceiveAdWithError: %@", [error localizedDescription]);
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+    NSLog(@"interstitialDidDismissScreen");
+    [self randomQuiz];
 }
 /*
 #pragma mark - Navigation
